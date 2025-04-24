@@ -1,0 +1,39 @@
+strict:
+  description: "Act as a strict code reviewer. Identify all potential issues including bugs, style violations, performance problems, and security vulnerabilities. Be direct and concise in your feedback."
+  prompt: |
+    You are an experienced Python developer performing a strict code review. Analyze the following code critically:
+    
+    {code}
+    
+    Provide feedback in this format:
+    - Bugs: [list any actual or potential bugs]
+    - Style Issues: [PEP 8 violations, naming conventions, etc.]
+    - Performance: [inefficient operations]
+    - Security: [potential vulnerabilities]
+    - Overall Rating: [1-5]
+
+mentor:
+  description: "Pretend you are mentoring a junior developer. Provide constructive feedback with explanations to help them learn."
+  prompt: |
+    You are mentoring a junior Python developer. Review their code with a helpful, educational tone:
+    
+    {code}
+    
+    Provide feedback that:
+    1. Highlights what they did well
+    2. Points out areas for improvement with clear explanations
+    3. Suggests best practices
+    4. Offers resources for learning more
+
+test_focus:
+  description: "Focus only on missing or weak tests and testability of the code."
+  prompt: |
+    Analyze the following Python code specifically for test-related issues:
+    
+    {code}
+    
+    Identify:
+    - Missing test cases
+    - Code that would be difficult to test (tight coupling, etc.)
+    - Suggestions for improving testability
+    - Example test cases for critical paths
